@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/rem.js"></script>
+    <script src="./js/zepto.js"></script>
+    <style>
+/*框架*/
+body {
+	overflow: hidden;
+}
+.page-wrap {
+	overflow:hidden
+}
+.page {
+	display:none;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0
+}
+.contain {
+	width:100%;
+	height:100%;
+	display:none;
+	position:relative;
+	z-index:0
+}
+.current .contain,.slide .contain {
+	display:block
+}
+.current {
+	display:block;
+	z-index:1
+}
+.slide {
+	display:block;
+	z-index:2
+}
+.swipe {
+	display:block;
+	z-index:3;
+	transition-duration:0ms!important;
+	-webkit-transition-duration:0ms!important
+}
+    </style>
+</head>
+
+<body>
+    <div class="music_box" id="music_box">
+        <audio loop="" src="./img/G.E.M.邓紫棋 - 光年之外.mp3" autoplay="" preload=""></audio>
+    </div>
+    <div class="bottom_box">
+        <div class="left_box"></div>
+        <div class="right_box"></div>
+    </div>
+    <div id="pageContain" class="page-wrap">
+        <div class="page page1" style="background-color:#fff">
+            <div class="contain contain_box_1">
+                <div class="center_box_1">
+                    <div class="font_img_1">
+                        <div class="font_box_1">
+                            <span class="name_box_1">凯瑟夫 & 戴安娜</span>
+                            <span class="time_box_1">2018.12.28.12：00</span>
+                        </div>
+                    </div>
+                    <div class="gif_box"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page page2" style="background-color:#fff">
+            <div class="contain contain_box_2">
+                <div class="outer_2"></div>
+                <div class="inner_2"></div>
+                <div class="img_box_2"></div>
+                <div class="gif_box_2"></div>
+                <div class="font_box_2"></div>
+                <span>新娘：戴安娜女士</span>
+                <span>我要看你老的样子，要看你坐在我面前笑的样子，还要看你照顾我的样子；要求太多，太奢望；因为我再也离不开你了！</span>
+            </div>
+        </div>
+        <div class="page page3" style="background-color:#fff">
+            <div class="contain contain_box_3">
+                <div class="outer_3"></div>
+                <div class="inner_3"></div>
+                <div class="img_box_3"></div>
+                <div class="gif_box_3"></div>
+                <div class="font_box_3"></div>
+                <span>新郎：史蒂夫先生</span>
+                <span> 亲爱的，他们都说婚姻是爱情的坟墓，但是，如果我们不结婚的话，那我们的爱情就死无葬身之地了，所以你还是委屈求全，嫁给我吧！</span>
+            </div>
+        </div>
+        <div class="page page4" style="background-color:#fff">
+            <div class="contain contain_box_4">
+                <div class="outer_4"></div>
+                <div class="inner_4"></div>
+                <div class="background_box_4"></div>
+                <div class="gif_box_4"></div>
+                <div class="wite_box_4">
+                    <div class="love_img_4"></div>
+                    <div class="in_bg_4"></div>
+                    <div class="font_box_4">
+                        <span>沉浸在幸福中的我们</span>
+                        <span>诚邀您来参加我们的婚礼</span>
+                        <span>Wedding Date / 婚礼时间</span>
+                        <span>2018年10月28日</span>
+                        <span>Wedding Address / 婚礼地址</span>
+                        <span>北京市香格里拉国际酒店3楼</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/fullPage.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+    
+        //禁止窗口的默认滑动
+        // document.ontouchmove = function(e){
+        //     e.preventDefault();
+        // };
+        
+    
+        //框架
+        var runPage,
+            interval,
+            autoPlay;
+    
+        // autoPlay = function(to) {
+    
+        //     clearTimeout(interval);
+        //     interval = setTimeout(function() {
+        //         runPage.go(to);
+        //     }, 5000);
+    
+        // }
+    
+        runPage = new FullPage({
+    
+            id : 'pageContain',                            // id of contain
+            slideTime : 800,                               // time of slide
+            continuous : false,                             // create an infinite feel with no endpoints
+            effect : {                                     // slide effect
+                transform : {
+                    translate : 'Y',                       // 'X'|'Y'|'XY'|'none'
+                    scale : [1, 1],                       // [scalefrom, scaleto]
+                    rotate : [0, 0]                       // [rotatefrom, rotateto]
+                },
+                opacity : [.8, 1]                           // [opacityfrom, opacityto]
+            },                           
+            mode : 'wheel,touch',               // mode of fullpage
+            easing : 'ease',                                // easing('ease','ease-in','ease-in-out' or use cubic-bezier like [.33, 1.81, 1, 1] )
+            // callback : function(index, thisPage) {
+    
+            //     index = index + 1 > 3 ? 0 : index + 1;
+            //     autoPlay(index);
+            // }
+        });
+    
+        // interval = setTimeout(function() {
+        //     runPage.go(runPage.thisPage() + 1);
+        // }, 5000);
+        
+        
+    </script>
+</body>
+
+</html>

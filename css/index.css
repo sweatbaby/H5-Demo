@@ -1,0 +1,502 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.music_box {
+  width: 0.6rem;
+  height: 0.6rem;
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: url('../img/bgmBtn-fbd2dc.svg') no-repeat center;
+  background-size: 100%;
+  z-index: 100;
+  animation: music_box 2s linear infinite;
+}
+.bottom_box {
+  width: 0.48rem;
+  height: 0.28rem;
+  position: fixed;
+  bottom: 0.5rem;
+  left: 50%;
+  margin-left: -0.24rem;
+  z-index: 3;
+  animation: bottom_box 1s infinite;
+}
+.bottom_box .left_box {
+  height: 0.1rem;
+  width: 0.3rem;
+  background: #fff;
+  transform: rotateZ(-45deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: -2px 2px 2px #888;
+}
+.bottom_box .right_box {
+  height: 0.1rem;
+  width: 0.3rem;
+  background: #fff;
+  transform: rotateZ(45deg);
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-shadow: 2px -2px 2px #888;
+}
+.contain_box_1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url(../img/1_background.jpg) no-repeat -1.5rem center;
+  background-size: 148%;
+  position: relative;
+  animation: contain_box_1 1.5s ease-in;
+}
+.contain_box_1 .center_box_1 {
+  width: 100%;
+  height: 3.4rem;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 1.3rem;
+  color: #fff;
+  font-size: 0.44rem;
+  animation: center_box_1 1.5s ease-in-out;
+}
+.contain_box_1 .center_box_1 .font_img_1 {
+  width: 100%;
+  height: 3.4rem;
+  background: url(../img/1_font.jpg) no-repeat center 0.5rem;
+  background-size: 110%;
+  padding: 0.2rem 0.1rem;
+  box-sizing: border-box;
+}
+.contain_box_1 .center_box_1 .font_img_1 .font_box_1 {
+  width: 6.2rem;
+  text-align: right;
+  margin-left: 1.1rem;
+  position: relative;
+  left: 0;
+  top: 0;
+  animation: font_box_1 1.5s ease-in;
+}
+.contain_box_1 .center_box_1 .font_img_1 .font_box_1 .time_box_1 {
+  display: block;
+  width: 100%;
+  font-size: 0.35rem;
+  padding: 0.1rem 0;
+}
+.contain_box_1 .center_box_1 .font_img_1 .font_box_1 .name_box_1 {
+  display: block;
+  width: 100%;
+  font-size: 0.45rem;
+}
+.contain_box_1 .center_box_1 .gif_box {
+  width: 100%;
+  height: 3.4rem;
+  background: url(../img/xingxing.gif) no-repeat center;
+  background-size: 100%;
+  padding: 0.2rem 0.1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  top: -3.4rem;
+}
+.contain_box_2 {
+  width: 100%;
+  height: 100%;
+  font-size: 0.28rem;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.contain_box_2 .outer_2 {
+  width: 6.5rem;
+  height: 10rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -5rem 0 0 -3.25rem;
+  border: 0.05rem solid #444;
+  box-sizing: border-box;
+  align-items: center;
+  animation: outer_2 1.5s linear ;
+  transform-origin: center bottom;
+  z-index: 1;
+}
+.contain_box_2 .inner_2 {
+  width: 5.8rem;
+  height: 9.3rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -4.65rem 0 0 -2.9rem;
+  border: 0.05rem solid #444;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  animation: inner_2 1.5s linear ;
+  transform-origin: center bottom;
+  z-index: 1;
+}
+.contain_box_2 .img_box_2 {
+  width: 5.2rem;
+  height: 6rem;
+  left: 1.15rem;
+  top: 2.33rem;
+  position: absolute;
+  background: url(../img/2_huajia.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  animation: img_box_2 1.5s ease-in;
+}
+.contain_box_2 .gif_box_2 {
+  position: absolute;
+  width: 5.2rem;
+  height: 6rem;
+  left: 1.15rem;
+  top: 2.33rem;
+  background: url(../img/xingxing.gif) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+.contain_box_2 .font_box_2 {
+  position: absolute;
+  width: 3.44rem;
+  height: 1.2rem;
+  left: 50%;
+  top: 50%;
+  margin: -0.6rem 0 0 -1.72rem;
+  z-index: 1;
+  background: url(../img/2_smile.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  animation: font_box_2 1.5s ease-out;
+}
+.contain_box_2 span {
+  display: block;
+  position: relative;
+  top: 8.55rem;
+  width: 4.4rem;
+  margin: 0 auto;
+  line-height: 0.5rem;
+  text-align: center;
+  animation: span_2_t 1.5s ease-out;
+  box-sizing: border-box;
+}
+.contain_box_2 span:last-child {
+  height: 2rem;
+  animation: span_2_r 1.5s ease-out;
+}
+.contain_box_3 {
+  width: 100%;
+  height: 100%;
+  font-size: 0.28rem;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.contain_box_3 .outer_3 {
+  width: 6.5rem;
+  height: 10rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -5rem 0 0 -3.25rem;
+  border: 0.05rem solid #444;
+  box-sizing: border-box;
+  align-items: center;
+  animation: outer_2 1.5s linear ;
+  transform-origin: center bottom;
+  z-index: 1;
+}
+.contain_box_3 .inner_3 {
+  width: 5.8rem;
+  height: 9.3rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -4.65rem 0 0 -2.9rem;
+  border: 0.05rem solid #444;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  animation: inner_2 1.5s linear ;
+  transform-origin: center bottom;
+  z-index: 1;
+}
+.contain_box_3 .img_box_3 {
+  width: 5.2rem;
+  height: 6rem;
+  left: 1.15rem;
+  top: 2.33rem;
+  position: absolute;
+  background: url(../img/3_ao.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  animation: img_box_3 1.5s ease-out;
+}
+.contain_box_3 .gif_box_3 {
+  position: absolute;
+  width: 5.2rem;
+  height: 6rem;
+  left: 1.15rem;
+  top: 2.33rem;
+  background: url(../img/xingxing.gif) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  animation: img_box_3 1.5s ease-out;
+}
+.contain_box_3 .font_box_3 {
+  position: absolute;
+  width: 3.44rem;
+  height: 1.2rem;
+  left: 50%;
+  top: 50%;
+  margin: -0.6rem 0 0 -1.72rem;
+  z-index: 1;
+  background: url(../img/2_smile.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  animation: font_box_2 1.5s ease-out;
+}
+.contain_box_3 span {
+  display: block;
+  position: relative;
+  top: 8.55rem;
+  width: 4.5rem;
+  margin: 0 auto;
+  line-height: 0.5rem;
+  text-align: center;
+  animation: span_2_t 1.5s ease-out;
+  box-sizing: border-box;
+}
+.contain_box_3 span:last-child {
+  height: 2.2rem;
+  animation: span_2_r 1.5s ease-out;
+}
+.contain_box_4 {
+  width: 100%;
+  height: 100%;
+  font-size: 0.28rem;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.contain_box_4 .outer_4 {
+  width: 6.5rem;
+  height: 10rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -5rem 0 0 -3.25rem;
+  border: 0.05rem solid #444;
+  box-sizing: border-box;
+  align-items: center;
+  animation: outer_2 1.5s linear ;
+  transform-origin: center bottom;
+  z-index: 1;
+}
+.contain_box_4 .inner_4 {
+  width: 5.8rem;
+  height: 9.3rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -4.65rem 0 0 -2.9rem;
+  border: 0.05rem solid #444;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  animation: inner_2 1.5s linear ;
+  transform-origin: center bottom;
+  z-index: 1;
+}
+.contain_box_4 .background_box_4 {
+  width: 5.2rem;
+  height: 8.7rem;
+  position: absolute;
+  left: 1.15rem;
+  top: 2.33rem;
+  background: url(../img/4_background\,jpg) no-repeat center;
+  background-size: 120%;
+  overflow: hidden;
+  animation: img_box_3 1.5s ease-out;
+}
+.contain_box_4 .gif_box_4 {
+  width: 4.5rem;
+  height: 8.0rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 2.7rem;
+  background: url(../img/xingxing.gif) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+}
+.contain_box_4 .wite_box_4 {
+  width: 4.5rem;
+  height: 8.0rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -2.25rem;
+  top: 2.7rem;
+  background: rgba(255, 255, 255, 0.6);
+}
+.contain_box_4 .wite_box_4 .love_img_4 {
+  width: 2.72rem;
+  height: 0.336rem;
+  background: url(../img/4_mylove.jpg) no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.36rem;
+  top: 0.5rem;
+  animation: love_img_4 1.5s ease-out !important;
+}
+.contain_box_4 .wite_box_4 .in_bg_4 {
+  width: 4rem;
+  height: 2.66rem;
+  position: absolute;
+  left: 50%;
+  top: 5.3rem;
+  margin-left: -2rem;
+  background: url(../img/4_inner\,jpg) no-repeat center;
+  background-size: contain;
+  animation: in_bg_4 1.5s ease-out !important;
+}
+.contain_box_4 .wite_box_4 .font_box_4 {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.contain_box_4 .wite_box_4 .font_box_4 span {
+  display: block;
+  font-size: 0.28rem;
+  text-align: center;
+  line-height: 0.55rem;
+  position: relative;
+}
+.contain_box_4 .wite_box_4 .font_box_4 span:nth-child(2n+1) {
+  animation: span_2_t 1.5s ease-out !important;
+}
+.contain_box_4 .wite_box_4 .font_box_4 span:nth-child(2n) {
+  animation: span_2_r 1.5s ease-out !important;
+}
+@keyframes music_box {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes bottom_box {
+  form {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    bottom: 0.75rem;
+  }
+  to {
+    opacity: 0;
+    bottom: 1rem;
+  }
+}
+@keyframes contain_box_1 {
+  from {
+    opacity: 0;
+    background-size: 200%;
+  }
+  to {
+    opacity: 1;
+    background-size: 148%;
+  }
+}
+@keyframes center_box_1 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes font_box_1 {
+  from {
+    left: 6.2rem;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes outer_2 {
+  from {
+    transform: rotateZ(-90deg);
+  }
+  to {
+    transform: rotateZ(0);
+  }
+}
+@keyframes inner_2 {
+  from {
+    transform: rotateZ(90deg);
+  }
+  to {
+    transform: rotateZ(0);
+  }
+}
+@keyframes font_box_2 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes span_2_t {
+  from {
+    left: -4.4rem;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes span_2_r {
+  from {
+    left: 4.4rem;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes img_box_2 {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes img_box_3 {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes love_img_4 {
+  from {
+    top: -2rem;
+  }
+  to {
+    top: 0.5;
+  }
+}
+@keyframes in_bg_4 {
+  from {
+    top: 7.3rem;
+  }
+  to {
+    top: 5.3;
+  }
+}
